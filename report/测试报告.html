@@ -243,9 +243,12 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>测试报告.html</h1>
-    <p>Report generated on 24-Dec-2020 at 16:04:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 26-Dec-2020 at 10:18:40 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>E:\soft\jsp\jdk</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.1"}</td></tr>
@@ -259,8 +262,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.5</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 0.04 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 18.49 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,12 +274,21 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">Test_ui/test_one.py::TestGoods::test_one</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_ui/TestGoods (2).py::TestGoods::test_search</td>
+          <td class="col-duration">7.65</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;Test_ui.TestGoods (2).TestGoods object at 0x00000000040FE908&gt;<br/><br/>    def test_search(self):<br/>        driver=self.login()<br/>    <br/>        sleep(1)<br/>        driver.switch_to.frame(&#x27;menu-frame&#x27;)<br/>&gt;       driver .find_element_by_bink_text(&#x27;商品名称&#x27;).click()<br/><span class="error">E       AttributeError: &#x27;WebDriver&#x27; object has no attribute &#x27;find_element_by_bink_text&#x27;</span><br/><br/>Test_ui\TestGoods (2).py:47: AttributeError<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Test_ui/TestGoods (2).py::TestGoods::test_isonsale</td>
+          <td class="col-duration">10.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;Test_ui.TestGoods (2).TestGoods object at 0x0000000003EC1D88&gt;<br/><br/>    def test_isonsale(self):<br/>        driver=self.into()<br/>        sleep(1)<br/>    <br/>        try:<br/>            goods_name=driver.find_element_by_xpath(&#x27;//*[@id=&quot;listDiv&quot;]/table[1]/tbody/tr[3]/td[2]/span&#x27;).text<br/>    <br/>            img_type=driver.find_element_by_xpath(&#x27;//*[@id=&quot;listDiv&quot;]/table[1]/tbody/tr[3]/td[5]/img&#x27;).get_attribute(&#x27;src&#x27;).split(&#x27;/&#x27;)<br/>            if img_type[-1]==&#x27;no.gif&#x27;:<br/>                is_on_sale=1<br/>            else:<br/>                is_on_sale=0<br/>    <br/>            driver.find_element_by_xpath(&#x27;//*[@id=&quot;listDiv&quot;]/table[1]/tbody/tr[3]/td[5]/img&#x27;).click()<br/>    <br/>    <br/>            cursor=self.get_cursor()<br/>&gt;           cursor.excute(&quot;select is_on_sale from ecs_goods where goods_name=&#x27;%s&#x27;&quot; % goods_name)<br/><span class="error">E           AttributeError: &#x27;Cursor&#x27; object has no attribute &#x27;excute&#x27;</span><br/><br/>Test_ui\TestGoods (2).py:92: AttributeError<br/></div></td></tr></tbody></table></body></html>
